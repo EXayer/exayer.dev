@@ -1,3 +1,0 @@
-index:
-    path: /pages
-    controller: App\Controller\PagesController::index
