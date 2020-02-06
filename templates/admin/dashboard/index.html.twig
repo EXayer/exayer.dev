@@ -1,6 +1,6 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/base.html.twig' %}
 
-{% block title %}Hello DashboardController!{% endblock %}
+{% block title %}Hello ADMIN DashboardController!{% endblock %}
 
 {% block body %}
 <style>
@@ -17,4 +17,8 @@
         <li>Your template at <code><a href="{{ 'C:/OSPanel/domains/lety.loc/templates/admin/dashboard/index.html.twig'|file_link(0) }}">templates/admin/dashboard/index.html.twig</a></code></li>
     </ul>
 </div>
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('admin') }}
+    {% endblock %}
 {% endblock %}
