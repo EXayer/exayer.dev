@@ -1,0 +1,15 @@
+.sidebar {
+  width: $sidebar-width;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  color: $sidebar-text;
+  overflow-y: auto;
+
+  .icon {
+    position: relative;
+    top: 2px;
+  }
+}

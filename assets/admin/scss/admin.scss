@@ -1,3 +1,30 @@
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
+@import "~tailwindcss/utilities";
+
+@import "varibles";
+@import "sidebar";
+
 body {
-  background-color: red;
+  background-color: $main-bg;
+  color: #495057;
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
+  margin-left: $sidebar-width;
+  min-height: 100%;
+}
+
+.content {
+  padding: 40px 40px 60px;
+}
+
+.toast-container {
+  display: table-cell;
+  vertical-align: middle;
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  z-index: 1050;
 }

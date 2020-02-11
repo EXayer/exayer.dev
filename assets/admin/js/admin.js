@@ -1,3 +1,9 @@
-import '../scss/admin.scss';
+import Vue from 'vue';
+import Sidebar from './components/Sidebar'
+import Navbar from './components/Navbar'
+import Toast from './components/Toast'
 
-console.log('admin');
+new Vue({
+  el: '#app',
+  components: {Sidebar, Navbar, Toast}
+});
