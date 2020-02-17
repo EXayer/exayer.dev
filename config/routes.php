@@ -8,11 +8,12 @@ return function (RoutingConfigurator $routes) {
         ->controller([\App\Controller\SecurityController::class, 'login'])
         ->methods(['GET', 'POST']);
 
-    $routes->add('logout', '/logout')
+    $routes->add('admin_logout', '/logout')
         ->methods(['GET']);
 
     /* ------------------------------------   Admin Area    ------------------------------------ */
     $routes->add('admin_dashboard', '/admin/dashboard')
         ->controller([\App\Controller\Admin\DashboardController::class, 'index'])
         ->methods(['GET']);
+
 };

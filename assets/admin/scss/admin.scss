@@ -28,3 +28,44 @@ main {
   bottom: 20px;
   z-index: 1050;
 }
+
+.table-index {
+  border-collapse: collapse;
+  font-weight: 400;
+  font-size: 14px;
+
+  thead > tr > th {
+    border-top: none !important;
+    border-bottom-width: 1px !important;
+    text-transform: uppercase;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #d6dee5;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  td, th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #d6dee5;
+  }
+
+  td:first-child, th:first-child {
+    padding-left: 20px;
+  }
+
+  td:last-child, th:last-child {
+    text-align: right;
+  }
+
+  tbody tr td {
+    min-width: 100px;
+  }
+
+  tbody tr:nth-child(odd) {
+    background: #f8f9fa;
+  }
+}

@@ -33,7 +33,7 @@ export default {
           label: 'Dashboard'
         },
         {
-          link: '/tags',
+          link: '/tag',
           icon: 'label',
           label: 'Tags'
         }
@@ -48,8 +48,10 @@ export default {
   methods: {
     setActive() {
       const page = '/' +  location.pathname.split('/')[3]; // TODO: [2] for prod
+
       for (let i = 0; i < this.links.length; i++) {
         this.links[i].active = page === this.links[i].link;
+        this.links[i].link = '/index.php/admin' + this.links[i].link; // TODO: remove index.php/ for prod
       }
     }
   }

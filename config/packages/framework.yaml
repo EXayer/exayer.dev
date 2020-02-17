@@ -16,3 +16,5 @@ framework:
         log: true
 
     csrf_protection: ~
+
+    validation: { enable_annotations: true }
