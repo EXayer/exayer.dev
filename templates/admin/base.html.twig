@@ -15,7 +15,7 @@
 <div id="app">
     <Sidebar></Sidebar>
     <main role="main">
-        <Navbar user-name="{{ app.user.name }}"></Navbar>
+        <Navbar user-name="{{ app.user.name|length ? app.user.name : app.user.email }}"></Navbar>
         <div class="content">
         {% block body %}{% endblock %}
         </div>

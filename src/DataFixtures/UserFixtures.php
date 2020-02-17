@@ -24,6 +24,7 @@ class UserFixtures extends Fixture
 
         $password = $this->encoder->encodePassword($user, 'password');
         $user->setPassword($password);
+        $user->setName('EXayer');
 
         $manager->persist($user);
         $manager->flush();

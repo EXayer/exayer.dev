@@ -17,13 +17,14 @@ security:
         main:
             anonymous: ~
             form_login:
-                login_path: security
-                check_path: security
+                login_path: /login
+                check_path: /login
+                require_previous_session: false
             guard:
                 authenticators:
                     - App\Security\LoginFormAuthenticator
             logout:
-                path: app_logout
+                path: admin_logout
             remember_me:
                 secret:   '%kernel.secret%'
                 lifetime: 604800 # 1 week in seconds
@@ -38,4 +39,11 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: '^/admin', roles: [IS_AUTHENTICATED_FULLY, ROLE_ADMIN] }
+        - { path: '^/admin', roles: [IS_AUTHENTICATED_FULLY] }
+
+#        # require ROLE_ADMIN for /admin*
+#        - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+#        - { path: ^/api, roles: [ IS_AUTHENTICATED_FULLY ] }
+#        - { path: ^/admin, roles: ROLE_ADMIN }
+#        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }`
