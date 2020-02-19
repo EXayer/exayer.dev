@@ -36,6 +36,11 @@ export default {
           link: '/tag',
           icon: 'label',
           label: 'Tags'
+        },
+        {
+          link: '/post',
+          icon: 'chrome_reader_mode',
+          label: 'Posts'
         }
       ]
     }

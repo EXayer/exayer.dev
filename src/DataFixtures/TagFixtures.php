@@ -2,12 +2,12 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Tag;
 use Faker;
+use App\Entity\Tag;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 
-class TagFixture extends Fixture
+class TagFixtures extends Fixture
 {
     private $faker;
 
@@ -21,7 +21,7 @@ class TagFixture extends Fixture
         for ($i = 0; $i < 10; $i++) {
             $tag = new Tag();
             $tag->setSlug($this->faker->unique()->slug(1));
-            $tag->setTitle($this->faker->sentence);
+            $tag->setTitle($this->faker->word);
             $manager->persist($tag);
         }
 
