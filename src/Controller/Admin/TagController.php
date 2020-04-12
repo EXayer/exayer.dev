@@ -79,6 +79,11 @@ class TagController extends AbstractController
             $entityManager->flush();
         }
 
+        $this->addFlash(
+            'notice',
+            'Tag deleted!'
+        );
+
         return $this->redirectToRoute('tag_index');
     }
 }
